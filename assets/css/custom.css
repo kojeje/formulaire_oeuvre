@@ -1,0 +1,19 @@
+
+.control-label,
+h3, h4{
+    text-align: center;
+
+    vertical-align: middle;
+}
+textarea{
+    border : 2px solid #000;
+    margin-bottom: 20px;
+
+
+}
+
+input{
+    margin-left:0;
+    margin-top:20px;
+
+}
