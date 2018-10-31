@@ -18,17 +18,50 @@
         //nom
         $titre = $_POST['titre'];
         //description
-        $ = $_POST['description'];
+        $description = $_POST['description'];
         //email
-        $gallerie = $_POST['email'];
+        $gallerie = $_POST['gallerie'];
         //password
-        $password = $_POST['password'];
+        $date = $_POST['date'];
         //array sur $fails
         $fails = [];
 
+
+
     if (empty($_FILES['fichier'])) {
         $contenu = "Erreur : le champ 'fichier' du formulaire est vide.";
-    } else {
+    }
+
+// Si $datevide
+if (empty($date)) {
+    //array_push
+    $fails[] = "date";
+}
+
+// SI $titre vide
+if (empty($titre)) {
+    //array_push
+    $fails[] = "titre";
+}
+// SI *description vide
+if (empty($description)) {
+    //array_push
+    $fails[] = "description";
+}
+//SI gallerie vide
+if (empty($gallerie)) {
+    //array_push
+    $fails[] = "gallerie";
+}
+//Si il y a des item dans $fails
+if (count($fails) > 0) {
+    echo "Vous devez remplir le(s) champ(s) ";
+
+    foreach ($fails as $fail) {
+        echo $fail . " ";
+    }
+    echo ".";
+} else {
         $nomFichier = $_FILES['fichier']['name'];
 
         $upload_succeed = is_uploaded_file($_FILES['fichier']['tmp_name']);
@@ -46,7 +79,7 @@
                 mysqli_set_charset($connexionBdd, 'utf8');
 
 
-                $requete = "INSERT INTO user_list VALUES (null, '$prenom', '$nom', null, '$email', '$password')";
+                $requete = "INSERT INTO creation VALUES (null, '$titre', '$description', null, '$gallerie', '$date')";
 
                 $query = mysqli_query($connexionBdd, $requete);
 

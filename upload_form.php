@@ -44,11 +44,6 @@
                 </div>
 
 
-                        <div class="form-group">
-                                <div class="col-sm-3 ">
-                                        <input id="uploader" name="uploader" type="submit" value="Uploader >>>" class="btn btn-primary"/>
-                                </div>
-                        </div>
 
                 </div>
                 <!-- GALLERIE-->
@@ -63,6 +58,12 @@
                 <div class="form-group">
                         <label for="date" class="control-label col-sm-6"><h4>Date de création</h4></label>
                         <input type="date" class="input col-sm-6" name="date">
+                </div>
+
+                <div class="form-group">
+                        <div class="col-sm-3 ">
+                                <input id="uploader" name="uploader" type="submit" value="envoyer" class="btn btn-primary"/>
+                        </div>
                 </div>
 
         </form>
