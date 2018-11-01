@@ -1,4 +1,8 @@
+body{
 
+    color: #ffb630 !important;
+    background-color: #191100;
+}
 .control-label,
 h3, h4{
     text-align: center;
@@ -16,4 +20,19 @@ input{
     margin-left:0;
     margin-top:20px;
 
+}
+.container
+{
+    background-color: #191100;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 5px solid #ffb630;
+
+    padding: 3%;
+}
+
+#lbl_fichier{
+    display: block;
+    width: 50%;
 }
